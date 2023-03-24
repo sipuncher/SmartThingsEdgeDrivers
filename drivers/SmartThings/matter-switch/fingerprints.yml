@@ -22,6 +22,11 @@ matterManufacturer:
     deviceProfileName: plug-binary
 
 matterGeneric:
+  - id: "matter/bridge"
+    deviceLabel: Matter Bridge
+    deviceTypes:
+      - id: 0x000E # Aggregator
+    deviceProfileName: matter-thing
   - id: "matter/on-off/light"
     deviceLabel: Matter OnOff Light
     deviceTypes:
