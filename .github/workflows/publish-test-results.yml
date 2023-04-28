@@ -22,9 +22,9 @@ jobs:
           event_file: event-file/event.json
           event_name: ${{ github.event.workflow_run.event }}
           files: "tests/*.xml"
-			- name: Publish coverage results
-				uses: 5monkeys/cobertura-action@master
-				with:
-					pull_request_number: ${{ env.pr_number }}
-					path: "coverage/*.xml"
-					minimum_coverage: 90
+      - name: Publish coverage results
+        uses: 5monkeys/cobertura-action@master
+        with:
+          pull_request_number: ${{ env.pr_number }}
+          path: "coverage/*.xml"
+          minimum_coverage: 90
